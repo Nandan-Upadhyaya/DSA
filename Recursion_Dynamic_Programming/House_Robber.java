@@ -49,7 +49,7 @@ class Main {
         if(index == 0) return nums[index];
         if(index < 0) return 0;
         if(dp[index] != -1) return dp[index];
-        return dp[nums.length] =  Math.max(nums[index] + memoizivehelper(index-2, nums, dp), memoizivehelper(index-1, nums, dp));
+        return dp[index] =  Math.max(nums[index] + memoizivehelper(index-2, nums, dp), memoizivehelper(index-1, nums, dp));
    }
 
 }
