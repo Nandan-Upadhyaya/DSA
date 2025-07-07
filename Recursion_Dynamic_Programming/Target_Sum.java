@@ -5,7 +5,7 @@ class Main {
         int target = 3;
         System.out.println( findTargetSumWaysRecursive(nums, target));
         System.out.println( findTargetSumWaysMemoizive(nums, target));
-        System.out.println( findTargetSumWaysTabulative(nums, target));
+      
         
     }
     public static int findTargetSumWaysRecursive(int[] nums, int target){
