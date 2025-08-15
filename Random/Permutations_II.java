@@ -17,7 +17,7 @@ class Solution {
             if(!result.contains(current)){
             result.add(new ArrayList<>(current));
             return;
-            };
+            }
         }
         for(int i = index ; i< nums.length ; i++){
             Collections.swap(current, index, i);
