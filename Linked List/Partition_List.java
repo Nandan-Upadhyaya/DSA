@@ -1,5 +1,6 @@
+
+
 class Solution {
-    
     public ListNode partitionBruteForce(ListNode head, int x) {
         ListNode dummyNode = new ListNode(-1);
         ListNode prev = dummyNode;
