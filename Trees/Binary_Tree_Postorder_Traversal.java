@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class Solution  {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         recursivehelper(root, list);
