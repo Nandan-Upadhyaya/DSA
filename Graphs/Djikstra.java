@@ -19,8 +19,21 @@ class Main {
         int[] dist = Djikstra.shortestPath(V, graph, 0);
         for(int i = 0 ; i< V ; i++)
          System.out.println(i  + " " +  dist[i]);
+
+        int[][] result = Djikstra.allPairsShortestPath(V, graph);
+
+        System.out.println("All Pairs Shortest Path:");
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
-}
+
+    }
+
+   
 
 class Djikstra {
     
@@ -64,9 +77,16 @@ class Djikstra {
         
         return dist;
     }
+
+    public static int[][] allPairsShortestPath(int V, List<List<Pair>> graph) {
+        int[][] dist = new int[V][V];
+
+        for (int src = 0; src < V; src++) {
+            dist[src] = shortestPath(V, graph, src);
+        }
+        return dist;
+    }
     
     
-    
-    
-    
+
 }
