@@ -1,4 +1,4 @@
-class Solution {
+class  Solution {
     public boolean isSubsequence(String s, String t) {
         Boolean[][] dp = new Boolean[s.length() + 1][t.length() + 1];
         return recursivehelper(s.length() - 1, t.length() - 1, s, t, dp);
