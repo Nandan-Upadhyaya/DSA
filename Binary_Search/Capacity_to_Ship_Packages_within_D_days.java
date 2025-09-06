@@ -14,11 +14,11 @@ class Solution {
         return left;
     }
 
-    public static boolean canShip(int[] weights, int capacity, int D) {
+    public static boolean canShip(int[] weights, int maxCapacity, int D) {
         int days = 1;
         int load = 0;
         for(int i = 0 ; i<weights.length ; i++) {
-            if(load + weights[i] <= capacity) load += weights[i];
+            if(load + weights[i] <= maxCapacity) load += weights[i];
             else {
                 days++;
                 load = weights[i];
