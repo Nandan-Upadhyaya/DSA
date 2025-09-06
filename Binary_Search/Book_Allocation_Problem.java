@@ -26,7 +26,6 @@ class Solution {
             }
         }
         
-        if(students > m) return false;
-        return true;
+        return students <= m;
     }
 }
