@@ -44,7 +44,7 @@ class Main {
         boolean notpick = recursivehelper(nums, index -1, sum);
         boolean pick = false;
         if(sum <= nums[index])
-        pick = recursivehelper(nums, index-1, sum - nums[index]);
+         pick = recursivehelper(nums, index-1, sum - nums[index]);
         return pick || notpick;
     }
     
@@ -55,7 +55,7 @@ class Main {
         boolean notpick = memoizivehelper(nums, index -1, sum, dp);
         boolean pick = false;
         if(sum <= nums[index])
-        pick = memoizivehelper(nums, index-1, sum - nums[index], dp);
+         pick = memoizivehelper(nums, index-1, sum - nums[index], dp);
         return dp[index][sum] = pick || notpick;
     }
 }

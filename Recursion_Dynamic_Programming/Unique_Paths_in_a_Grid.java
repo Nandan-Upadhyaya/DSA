@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+
 class Main {
     public static void main(String[] args) {
         int m = 5, n= 4;
@@ -49,9 +52,9 @@ class Main {
     if(m == 0 && n == 0) return 1;
     int left = 0, up = 0;
     if(n -1 >= 0)
-    left =  recursivehelper(m , n-1);
+     left =  recursivehelper(m , n-1);
     if(m -1 >= 0)
-    up = recursivehelper(m-1, n);
+     up = recursivehelper(m-1, n);
     return left + up;
     }
     public static int memoizivehelper(int m, int n, int[][] dp){
@@ -59,9 +62,9 @@ class Main {
     int left = 0, up = 0;
     if(dp[m][n] != -1) return dp[m][n];
     if(n -1 >= 0)
-    left =  memoizivehelper(m , n-1, dp);
+     left =  memoizivehelper(m , n-1, dp);
     if(m -1 >= 0)
-    up = memoizivehelper(m-1, n, dp);
+     up = memoizivehelper(m-1, n, dp);
     return dp[m][n] = left + up;
     }
     

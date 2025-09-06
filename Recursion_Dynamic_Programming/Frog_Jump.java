@@ -35,7 +35,7 @@ class Main {
         return dp[n];
     }
     public static int frogJumpSpaceOptimisive(int n ,int[] heights){
-        int prev2 = 0, prev1 = 0, minenergy = Integer.MAX_VALUE;
+        int prev2 = 0, prev1 = 0;
         for(int i = 1 ; i<=n ; i++){
             int onejump = prev1 +  Math.abs(heights[i] - heights[i-1]);
             int twojump = Integer.MAX_VALUE;

@@ -42,7 +42,7 @@ class Main {
         int pick = 0;
         if(nums[index] <= target)
          pick = recursivehelper(index - 1, nums, target - nums[index]);
-         int notpick =  recursivehelper( index - 1, nums, target); 
+        int notpick =  recursivehelper( index - 1, nums, target); 
         return pick + notpick;
     }
     
@@ -51,7 +51,7 @@ class Main {
         int pick = 0;
         if(dp[index][target] != -1) return dp[index][target];
         if(nums[index] <= target)
-        pick = memoizivehelper(index - 1, nums, target - nums[index], dp);
+         pick = memoizivehelper(index - 1, nums, target - nums[index], dp);
         int notpick = memoizivehelper( index - 1, nums, target, dp);
         return dp[index][target] = pick + notpick;
     }

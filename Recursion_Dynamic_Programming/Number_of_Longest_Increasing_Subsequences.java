@@ -27,7 +27,7 @@ class Main {
         int notpick = recursivehelper(index + 1, prevIndex, nums, currlen, maxlen, count);
         int pick = 0;
         if(prevIndex == -1 || nums[index] > nums[prevIndex]) 
-        pick = recursivehelper(index + 1, index, nums, currlen + 1, maxlen, count);
+         pick = recursivehelper(index + 1, index, nums, currlen + 1, maxlen, count);
         return pick + notpick;
         
     }

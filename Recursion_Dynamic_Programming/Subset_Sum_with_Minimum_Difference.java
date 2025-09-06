@@ -21,16 +21,12 @@ class Main {
     }
     
     public static int recursivehelper(int index, int[] nums, int sum, int currsum){
-        if(index < 0){
-         return Math.abs(currsum - (sum - currsum));   
-        }
+        if(index < 0) return Math.abs(currsum - (sum - currsum));            
         return Math.min(recursivehelper(index-1, nums, sum, currsum + nums[index]), recursivehelper(index-1, nums, sum, currsum));
     }
     
      public static int memoizivehelper(int index, int[] nums, int sum, int currsum, int[][] dp){
-        if(index < 0){
-         return Math.abs(currsum - (sum - currsum));   
-        }
+        if(index < 0) return Math.abs(currsum - (sum - currsum));
         if(dp[index][currsum] != -1) return dp[index][currsum];
         return dp[index][currsum] = Math.min(memoizivehelper(index-1, nums, sum, currsum + nums[index], dp), memoizivehelper(index-1, nums, sum, currsum, dp));
     }
