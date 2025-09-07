@@ -1,6 +1,12 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Solution {
     public List<List<String>> solveNQueens(int n) {
-       List<List<String>> result = new ArrayList<>();
+       List<List<String>> result;
+        result = new ArrayList<>();
        char[][] board = new char[n][n];
        for(char[] row : board) Arrays.fill(row, '.');
        recursivebacktracking(0, board, result, n);
