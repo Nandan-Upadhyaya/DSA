@@ -14,6 +14,7 @@ class Solution {
             pq.offer(new int[] {entry.getKey(), entry.getValue()});
             if(pq.size() > k) pq.poll();
         }
+        
         int[] res = new int[k];
         for(int i = k - 1 ; i >= 0 ; i--) res[i] = pq.poll()[0];
         return res;
