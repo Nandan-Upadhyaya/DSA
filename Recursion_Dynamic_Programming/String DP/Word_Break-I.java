@@ -27,4 +27,19 @@ class Solution {
           dp[start] = false;
           return false;
     }
+
+    public static boolean tabulativehelper(String s, Set<String> wordSet) {
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[s.length()] = true;
+        for(int i = s.length() - 1 ; i>= 0 ; i--) {
+            for(int end = i + 1 ; end <= s.length() ; end++) {
+                String prefix = s.substring(i, end);
+                if(wordSet.contains(prefix)) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[0];
+    }
 }
