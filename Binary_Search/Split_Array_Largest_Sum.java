@@ -1,7 +1,7 @@
 
 import java.util.stream.IntStream;
 
-class Solution {
+class  Solution {
     public int splitArray(int[] nums, int k) {
         int left = IntStream.of(nums).max().orElseThrow();
         int right = IntStream.of(nums).sum();
