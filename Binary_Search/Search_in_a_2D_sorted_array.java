@@ -6,7 +6,7 @@ class Solution {
         return false;
     }
 
-     public boolean searchMatrix(int[][] matrix, int target) {
+     public boolean searchMatrixOptimized(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int left = 0, right = m * n - 1;
         while(left <= right) {
