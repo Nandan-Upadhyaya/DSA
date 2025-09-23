@@ -1,3 +1,9 @@
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+class Solution {
 public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
     Map<Integer, Integer> map = new HashMap<>();
     Stack<Integer> stack = new Stack<>();
@@ -22,4 +28,5 @@ public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
     }
 
     return result;
+}
 }
